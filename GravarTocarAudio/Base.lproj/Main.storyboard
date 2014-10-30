@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jY-uE-gAL">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Tocar Musica Fundo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="19" y="455" width="296" height="49"/>
+                                </variation>
+                                <connections>
+                                    <action selector="tocarMusicaFundo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jps-0D-O2V"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker.png" translatesAutoresizingMaskIntoConstraints="NO" id="90a-y8-hNn">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="80" y="74" width="160" height="160"/>
+                                </variation>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fCi-GD-63v">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="44" y="345" width="247" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="mudaVolume:" destination="vXZ-lx-hvc" eventType="valueChanged" id="bRp-zr-EAb"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OSS-xY-cZ5">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="44" y="406" width="247" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="mudaTempo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qa3-m9-mbB"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNe-SB-Ymv">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Tocar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="201" y="26" width="124" height="18"/>
+                                </variation>
+                                <connections>
+                                    <action selector="tocarParar:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZUi-83-kgd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnM-98-1sG">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Gravar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="9" y="28" width="124" height="17"/>
+                                </variation>
+                                <connections>
+                                    <action selector="gravarParar:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yeY-xV-iW2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="6jY-uE-gAL"/>
+                                <exclude reference="90a-y8-hNn"/>
+                                <exclude reference="fCi-GD-63v"/>
+                                <exclude reference="OSS-xY-cZ5"/>
+                                <exclude reference="UNe-SB-Ymv"/>
+                                <exclude reference="PnM-98-1sG"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="6jY-uE-gAL"/>
+                                <include reference="90a-y8-hNn"/>
+                                <include reference="fCi-GD-63v"/>
+                                <include reference="OSS-xY-cZ5"/>
+                                <include reference="UNe-SB-Ymv"/>
+                                <include reference="PnM-98-1sG"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="btnGravarParar" destination="PnM-98-1sG" id="CE5-wQ-N58"/>
+                        <outlet property="btnTocarMusicaFundo" destination="6jY-uE-gAL" id="D1T-7x-ogj"/>
+                        <outlet property="btnTocarParar" destination="UNe-SB-Ymv" id="jGN-kw-keG"/>
+                        <outlet property="imgvSpeaker" destination="90a-y8-hNn" id="C1N-xP-IfE"/>
+                        <outlet property="sldTempo" destination="OSS-xY-cZ5" id="CjO-C4-xkA"/>
+                        <outlet property="sldVolume" destination="fCi-GD-63v" id="LTJ-tr-kSD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="330" y="408.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="speaker.png" width="200" height="194"/>
+    </resources>
+</document>
